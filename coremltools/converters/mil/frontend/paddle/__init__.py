@@ -8,7 +8,5 @@ from coremltools._deps import _HAS_PADDLE
 register_paddle_op = None
 
 if _HAS_PADDLE:
-    from .dialect_ops import (paddle_tensor_assign, paddle_upsample_bilinear,
-                              paddle_upsample_nearest_neighbor)
     from .load import load
     from .paddle_op_registry import register_paddle_op

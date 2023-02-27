@@ -10,7 +10,7 @@ import os
 from setuptools import setup, find_packages
 
 # Get the coremltools version string
-coremltools_dir = os.path.join(os.path.dirname(__file__), "coremltools")
+coremltools_dir = os.path.join(os.path.dirname(__file__), "paddle2coreml")
 version_module = imp.load_source(
     "coremltools.version", os.path.join(coremltools_dir, "version.py")
 )
@@ -19,8 +19,10 @@ __version__ = version_module.__version__
 README = os.path.join(os.getcwd(), "README.md")
 
 
-long_description = """coremltools
+long_description = """paddle2coreml
 ===========
+
+paddle2coreml is a special version of coremltools to convert PaddlePaddle model to Core ML. 
 
 `Core ML <http://developer.apple.com/documentation/coreml>`_
 is an Apple framework that allows developers to easily integrate
@@ -57,13 +59,13 @@ that can be found in the LICENSE.txt file.
 """
 
 setup(
-    name="coremltools",
-    version=__version__,
-    description="Community Tools for Core ML",
-    long_description=long_description,
-    author="Apple Inc.",
-    author_email="coremltools@apple.com",
-    url="https://github.com/apple/coremltools",
+    name="paddle2coreml",
+    version="0.0.2",
+    description="Special version of coremltools to convert PaddlePaddle model to Core ML.",
+    # long_description=long_description,
+    author="Shicheng1996",
+    author_email="lishicheng1996ai@gmail.com",
+    url="https://github.com/lishicheng1996/coremltools/tree/paddle_frontend",
     packages=find_packages(),
     package_data={
         "": ["LICENSE.txt", "README.md", "libmilstoragepython.so", "libcoremlpython.so", "libmodelpackage.so"]
