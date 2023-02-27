@@ -10,7 +10,7 @@ import os
 from setuptools import setup, find_packages
 
 # Get the coremltools version string
-coremltools_dir = os.path.join(os.path.dirname(__file__), "paddle2coreml")
+coremltools_dir = os.path.join(os.path.dirname(__file__), "coremltools")
 version_module = imp.load_source(
     "coremltools.version", os.path.join(coremltools_dir, "version.py")
 )
